@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head runat="server">
+    <title>Astro Space Tours</title>
+    <link rel="stylesheet" href="Site4.css" />
+    <style>
+        body {
+            background-image: url('img/d8.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0; /* Add this to remove default margin */
+        }
+
+        /* Add CSS for sticky footer */
+        #wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #con {
+            flex: 1; /* Push footer to the bottom */
+        }
+
+        #footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <header id="header">
+            <h1> Astro Space Tours</h1>
+        </header>
+
+        <nav id="nav">
+            <ul>
+                <li><a href="Default.aspx">Home</a></li>
+                <li><a href="AboutUs.aspx">About Us</a></li>
+                <li><a href="Contact.aspx">Contact</a></li>
+                <li><a href="Tours.aspx">Tours</a></li>
+                <li><a href="Ships.aspx">Ships</a></li>
+                <li><a href="Book.aspx">Book</a></li>
+                <li><a href="TourAdmin.aspx">TourAdmin</a></li>
+                <li><a href="PilotAdmin.aspx">PilotAdmin</a></li>
+                <li><a href="Login.aspx">Login</a></li>
+                <li><a href="Pilot.aspx">Pilot</a></li>
+            </ul>
+        </nav>
+        <div id="wrapper">
+            <div id="con">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+        </div>
+    </form>
+</body>
+
+</html>
